@@ -23,6 +23,35 @@ body{
     background: var(--color-background);
 }
 
+.titulos{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.subtitulos{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primario);
+}
+.btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    background: var(--color-primario);
+    font-weight: 700;
+
+    padding: 15px 30px;
+    outline: none;
+    border: 2px solid var(--color-primario);
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+}
 /*slider de productos*/
 #menu-productos .contenedor-principal{
     display:flex;
