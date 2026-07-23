@@ -138,3 +138,50 @@ body{
 .contenedor-productos:hover .imagen-productos img{
     transform: scale(1.15)
 }
+
+/*Servicios*/
+#servicios{
+    height: 100vh;
+    background: var(--color-background);
+    padding: 40px;
+}
+
+.servicios-titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicios-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "ingredientes imagen" "calidad imagen delivery";
+}
+
+.items-ingredientes{
+    grid-area: ingredientes;
+}
+.items-calidad{
+    grid-area: calidad;
+}
+.items-delivery{
+    grid-area: delivery;
+}
+.imagen-central{
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-central img{
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+
+.imagen-central img:hover{
+    transform: scale(1.1);
+}
