@@ -140,94 +140,115 @@ body{
 }
 
 /*Servicios*/
-#servicios{
+#servicios {
     height: 100vh;
     background: var(--color-background);
     padding: 40px;
 }
 
-.servicios-titulos{
+.servicios-titulos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.servicios-container{
+.servicios-container {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
-    grid-template-areas: "ingredientes imagen" "calidad imagen delivery";
+    gap: 30px;
+    grid-template-areas: 
+        "ingredientes imagen rapidez"
+        "calidad imagen delivery";
+    align-items: center;
+    justify-items: center;
 }
 
-.items-ingredientes{
+
+.items-ingredientes {
     grid-area: ingredientes;
 }
-.items-calidad{
+
+.items-calidad {
     grid-area: calidad;
 }
-.items-delivery{
+
+.items-rapidez {
+    grid-area: rapidez;
+}
+
+.items-delivery {
     grid-area: delivery;
 }
-.imagen-central{
+
+.imagen-central {
     grid-area: imagen;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imagen-central img{
+.imagen-central img {
     max-width: 100%;
-    transition: transform 0.5s;
+    width: 350px; 
+    transition: transform 0.5s ease;
 }
 
-.imagen-central img:hover{
+.imagen-central img:hover {
     transform: scale(1.1);
 }
 
-.items-calidad, .items-delivery, 
-.items-rapidez, .items-ingredientes{
+/*Estilo General*/
+.items-ingredientes, .items-calidad, 
+.items-rapidez, .items-delivery {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.items-calidad span, .items-delivery span
-.items-ingredientes span, .items-rapidez span{
+.items-ingredientes span, .items-calidad span,
+.items-rapidez span, .items-delivery span {
     width: 95px;
     height: 95px;
     font-size: 40px;
     text-align: center;
     display: flex;
     align-items: center;
-
     justify-content: center;
     padding: 20px;
-    color: var(--color-secundario);
     border: 5px double #dedede;
     border-radius: 50%;
-    transition: background-color 0.5s, var(--color-background) 0.5s;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.items-calidad span:hover, .items-delivery span:hover,
-.items-ingredientes span:hover, .items-rapidez span:hover{
-    background-color: var(--color-secundario);
-    color: #fff;
-}
 
-.items-ingredientes span, .items-calidad span{
+.items-ingredientes span,
+.items-calidad span {
     color: var(--color-primario);
 }
 
 .items-ingredientes span:hover,
-.items-calidad span:hover{
+.items-calidad span:hover {
     background-color: var(--color-primario);
-    color: #fff;
+    color: #FFF;
 }
 
-.titulo-item{
+.items-rapidez span,
+.items-delivery span {
+    color: var(--color-secundario);
+}
+
+.items-rapidez span:hover,
+.items-delivery span:hover {
+    background-color: var(--color-secundario);
+    color: #FFF;
+}
+
+
+.titulo-item {
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
@@ -235,7 +256,7 @@ body{
     margin-top: 15px;
 }
 
-.texto-item{
+.texto-item {
     font-size: 14px;
     font-style: italic;
     text-align: center;
