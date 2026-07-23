@@ -185,3 +185,62 @@ body{
 .imagen-central img:hover{
     transform: scale(1.1);
 }
+
+.items-calidad, .items-delivery, 
+.items-rapidez, .items-ingredientes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.items-calidad span, .items-delivery span
+.items-ingredientes span, .items-rapidez span{
+    width: 95px;
+    height: 95px;
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    padding: 20px;
+    color: var(--color-secundario);
+    border: 5px double #dedede;
+    border-radius: 50%;
+    transition: background-color 0.5s, var(--color-background) 0.5s;
+}
+
+.items-calidad span:hover, .items-delivery span:hover,
+.items-ingredientes span:hover, .items-rapidez span:hover{
+    background-color: var(--color-secundario);
+    color: #fff;
+}
+
+.items-ingredientes span, .items-calidad span{
+    color: var(--color-primario);
+}
+
+.items-ingredientes span:hover,
+.items-calidad span:hover{
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+.titulo-item{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.texto-item{
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    color: var(--color-text);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
